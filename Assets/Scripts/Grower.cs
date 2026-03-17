@@ -7,10 +7,20 @@ public class Grower : MonoBehaviour
     public Transform appleTransform;
     public float appleDelay = 1;
 
+    Coroutine theGrowingCoroutine;
+    Coroutine theTreeCoroutine;
+    Coroutine theAppleCoroutine;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartCoroutine(GrowTree());
+        treeTransform.localScale = Vector2.zero;
+        appleTransform.localScale = Vector2.zero;
+
+        //StartCoroutine(GrowTree());
+        //StartCoroutine(GrowApple());
+
+        StartTreeGrowing();
     }
 
     // Update is called once per frame
@@ -21,11 +31,45 @@ public class Grower : MonoBehaviour
 
     public void StartTreeGrowing()
     {
-        StartCoroutine(GrowTree());
+        //StartCoroutine(GrowTree());
+        //StartCoroutine(GrowApple());
+
+        StopCoroutine(StartTheGrowing());
+
+        if (theGrowingCoroutine != null)
+        {
+            StopCoroutine(theGrowingCoroutine);
+        }
+
+        if (theTreeCoroutine != null)
+        {
+            StopCoroutine(theTreeCoroutine);
+        }
+
+        if (theAppleCoroutine != null)
+        {
+            StopCoroutine(theAppleCoroutine);
+        }
+
+        theGrowingCoroutine = StartCoroutine(StartTheGrowing());
+    }
+
+    IEnumerator StartTheGrowing()
+    {
+        Debug.Log("Starting...");
+        yield return theTreeCoroutine = StartCoroutine(GrowTree());
+        Debug.Log("...tree finished, starting apple...");
+
+        yield return new WaitForSeconds(appleDelay);
+
+        yield return theAppleCoroutine = StartCoroutine(GrowApple());
+        Debug.Log("...done!!");
     }
 
     IEnumerator GrowTree()
     {
+        Debug.Log("Started the tree");
+
         treeTransform.localScale = Vector2.zero;
         appleTransform.localScale = Vector2.zero;
 
@@ -40,10 +84,15 @@ public class Grower : MonoBehaviour
 
             yield return null;
         }
+        Debug.Log("Finished the tree");
+    }
 
-        yield return new WaitForSeconds(appleDelay);
+    IEnumerator GrowApple()
+    {
+        Debug.Log("Started the apple");
 
-        t = 0;
+        float t = 0;
+        appleTransform.localScale = Vector2.one * t;
 
         while (t < 1)
         {
@@ -52,5 +101,6 @@ public class Grower : MonoBehaviour
 
             yield return null;
         }
+        Debug.Log("Finished the apple");
     }
 }
