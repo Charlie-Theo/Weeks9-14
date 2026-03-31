@@ -409,6 +409,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 785893935450215497, guid: 7ad3afd2617c1984ba2d85b0af321aeb, type: 3}
   m_PrefabInstance: {fileID: 756180304}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &575677849 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5518556680817953190, guid: 7ad3afd2617c1984ba2d85b0af321aeb, type: 3}
+  m_PrefabInstance: {fileID: 756180304}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8097a13bf2c6f4b9c3f3bcab52dd96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyBuilding
 --- !u!1 &576570643
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,6 +770,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 785893935450215497, guid: 7ad3afd2617c1984ba2d85b0af321aeb, type: 3}
   m_PrefabInstance: {fileID: 1125114499}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &824615334 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5518556680817953190, guid: 7ad3afd2617c1984ba2d85b0af321aeb, type: 3}
+  m_PrefabInstance: {fileID: 1125114499}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8097a13bf2c6f4b9c3f3bcab52dd96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyBuilding
 --- !u!1001 &915485266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -829,6 +851,17 @@ Transform:
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5518556680817953190, guid: 7ad3afd2617c1984ba2d85b0af321aeb, type: 3}
   m_PrefabInstance: {fileID: 1932947945}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8097a13bf2c6f4b9c3f3bcab52dd96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyBuilding
+--- !u!114 &1008204283 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5518556680817953190, guid: 7ad3afd2617c1984ba2d85b0af321aeb, type: 3}
+  m_PrefabInstance: {fileID: 1404742499}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -1128,6 +1161,17 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &1249774832 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5518556680817953190, guid: 7ad3afd2617c1984ba2d85b0af321aeb, type: 3}
+  m_PrefabInstance: {fileID: 144177461}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8097a13bf2c6f4b9c3f3bcab52dd96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyBuilding
 --- !u!1001 &1275779480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1377,6 +1421,28 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1461175915 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5518556680817953190, guid: 7ad3afd2617c1984ba2d85b0af321aeb, type: 3}
+  m_PrefabInstance: {fileID: 1500434432}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8097a13bf2c6f4b9c3f3bcab52dd96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyBuilding
+--- !u!114 &1472824429 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5518556680817953190, guid: 7ad3afd2617c1984ba2d85b0af321aeb, type: 3}
+  m_PrefabInstance: {fileID: 47401946}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8097a13bf2c6f4b9c3f3bcab52dd96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyBuilding
 --- !u!1001 &1500434432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1707,6 +1773,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646549383}
   m_CullTransparentMesh: 1
+--- !u!114 &1711805858 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5518556680817953190, guid: 7ad3afd2617c1984ba2d85b0af321aeb, type: 3}
+  m_PrefabInstance: {fileID: 1147105515}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8097a13bf2c6f4b9c3f3bcab52dd96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyBuilding
 --- !u!1001 &1724396707
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1778,6 +1855,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 785893935450215497, guid: 7ad3afd2617c1984ba2d85b0af321aeb, type: 3}
   m_PrefabInstance: {fileID: 1724396707}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1831756371 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5518556680817953190, guid: 7ad3afd2617c1984ba2d85b0af321aeb, type: 3}
+  m_PrefabInstance: {fileID: 1724396707}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8097a13bf2c6f4b9c3f3bcab52dd96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyBuilding
 --- !u!1001 &1932947945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1923,6 +2011,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 785893935450215497, guid: 7ad3afd2617c1984ba2d85b0af321aeb, type: 3}
   m_PrefabInstance: {fileID: 173551997}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1963686330 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5518556680817953190, guid: 7ad3afd2617c1984ba2d85b0af321aeb, type: 3}
+  m_PrefabInstance: {fileID: 173551997}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8097a13bf2c6f4b9c3f3bcab52dd96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyBuilding
+--- !u!114 &1991990012 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5518556680817953190, guid: 7ad3afd2617c1984ba2d85b0af321aeb, type: 3}
+  m_PrefabInstance: {fileID: 772026835}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8097a13bf2c6f4b9c3f3bcab52dd96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyBuilding
 --- !u!1 &2005900385
 GameObject:
   m_ObjectHideFlags: 0
@@ -2142,6 +2252,18 @@ MonoBehaviour:
   villageBuildings:
   - {fileID: 969723501}
   - {fileID: 533649539}
+  - {fileID: 824615334}
+  - {fileID: 1249774832}
+  - {fileID: 2132271920}
+  - {fileID: 1991990012}
+  - {fileID: 1963686330}
+  - {fileID: 575677849}
+  - {fileID: 1472824429}
+  - {fileID: 2085942071}
+  - {fileID: 1831756371}
+  - {fileID: 1461175915}
+  - {fileID: 1008204283}
+  - {fileID: 1711805858}
 --- !u!4 &2030191857
 Transform:
   m_ObjectHideFlags: 0
@@ -2184,11 +2306,33 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &2085942071 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5518556680817953190, guid: 7ad3afd2617c1984ba2d85b0af321aeb, type: 3}
+  m_PrefabInstance: {fileID: 70519180}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8097a13bf2c6f4b9c3f3bcab52dd96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyBuilding
 --- !u!4 &2132271919 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 785893935450215497, guid: 7ad3afd2617c1984ba2d85b0af321aeb, type: 3}
   m_PrefabInstance: {fileID: 915485266}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2132271920 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5518556680817953190, guid: 7ad3afd2617c1984ba2d85b0af321aeb, type: 3}
+  m_PrefabInstance: {fileID: 915485266}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8097a13bf2c6f4b9c3f3bcab52dd96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyBuilding
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

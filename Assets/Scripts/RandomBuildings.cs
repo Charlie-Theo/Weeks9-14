@@ -26,6 +26,7 @@ public class RandomBuildings : MonoBehaviour
         int randomNum = Random.Range(0, villageBuildings.Count);
         
         villageBuildings[randomNum].StartDestroy();
+        villageBuildings.RemoveAt(randomNum);
 
     }
 }
