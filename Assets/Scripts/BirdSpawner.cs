@@ -42,18 +42,23 @@ public class BirdSpawner : MonoBehaviour
 
             timerValue = 0;
         }
+    }
 
-
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-
-        for (int b = 0;  b < birds.Count; b++)
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        if (context.performed == true)
         {
-            birdSR = birds[b].GetComponent<SpriteRenderer>();
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 
-            if (birdSR.bounds.Contains(mousePos) == true && Mouse.current.leftButton.wasPressedThisFrame)
+            for (int b = 0; b < birds.Count; b++)
             {
-                lerpPos = mousePos;
-                Debug.Log(b);
+                birdSR = birds[b].GetComponent<SpriteRenderer>();
+
+                if (birdSR.bounds.Contains(mousePos) == true)
+                {
+                    lerpPos = mousePos;
+                    Debug.Log(b);
+                }
             }
         }
     }
