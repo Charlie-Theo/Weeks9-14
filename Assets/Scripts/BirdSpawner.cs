@@ -25,6 +25,9 @@ public class BirdSpawner : MonoBehaviour
     public AnimationCurve curve;
     bool isThrowing;
     int currentBird;
+    public AudioSource SFX;
+
+    public BallMovement ballScript;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -58,10 +61,10 @@ public class BirdSpawner : MonoBehaviour
             {
                 t = 0;
                 isThrowing = false;
-                ball.transform.position = Vector2.zero;
 
                 Destroy(birds[currentBird]);
                 birds.RemoveAt(currentBird);
+                SFX.Play();
 
                 birdCounter.text = "Number of Birds: " + birds.Count;
             }
@@ -86,6 +89,7 @@ public class BirdSpawner : MonoBehaviour
 
                     isThrowing = true;
                     lerpPos2 = mousePos;
+                    ballScript.BallIsThrown();
                 }
             }
         }
