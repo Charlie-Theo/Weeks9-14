@@ -440,7 +440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BirdSpawner
   birdPrefab: {fileID: 6439461352007459065, guid: 3670341f6d4ac3844834c2a79aa5f898, type: 3}
   birds: []
-  timerMax: 4
+  timerMax: 1.5
   birdCounter: {fileID: 1447030115}
   t: 0
   ball: {fileID: 2135216414}
