@@ -442,6 +442,32 @@ MonoBehaviour:
   birds: []
   timerMax: 4
   birdCounter: {fileID: 1447030115}
+  t: 0
+  ball: {fileID: 2135216414}
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &1514720540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,6 +505,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1514720539}
         m_TargetAssemblyTypeName: BirdSpawner, Assembly-CSharp
+        m_MethodName: OnAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ThrowingBall, Assembly-CSharp
         m_MethodName: OnAttack
         m_Mode: 0
         m_Arguments:
@@ -835,7 +873,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2135216414}
   - component: {fileID: 2135216413}
-  - component: {fileID: 2135216412}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -843,18 +880,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2135216412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2135216411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1096d5d8f6318343a5998bb3fa7c778, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ThrowingBall
 --- !u!212 &2135216413
 SpriteRenderer:
   serializedVersion: 2

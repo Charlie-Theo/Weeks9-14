@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -15,14 +16,19 @@ public class BirdSpawner : MonoBehaviour
     float timerValue = 0;
 
     public TextMeshProUGUI birdCounter;
-
     SpriteRenderer birdSR;
-    Vector2 lerpPos;
+
+    Vector2 lerpPos1;
+    Vector2 lerpPos2;
+    public float t;
+    public Transform ball;
+    public AnimationCurve curve;
+    bool isThrowing;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        lerpPos1 = ball.transform.position;
     }
 
     // Update is called once per frame
@@ -42,6 +48,20 @@ public class BirdSpawner : MonoBehaviour
 
             timerValue = 0;
         }
+
+        if (isThrowing == true)
+        {
+            t += Time.deltaTime;
+
+            if (t > 1)
+            {
+                t = 0;
+                isThrowing = false;
+                ball.transform.position = Vector2.zero;
+            }
+
+            ball.transform.position = Vector2.Lerp(lerpPos1, lerpPos2, curve.Evaluate(t));
+        }
     }
 
     public void OnAttack(InputAction.CallbackContext context)
@@ -56,8 +76,8 @@ public class BirdSpawner : MonoBehaviour
 
                 if (birdSR.bounds.Contains(mousePos) == true)
                 {
-                    lerpPos = mousePos;
-                    Debug.Log(b);
+                    isThrowing = true;
+                    lerpPos2 = mousePos;
                 }
             }
         }
