@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class BirdSpawner : MonoBehaviour
@@ -26,8 +27,9 @@ public class BirdSpawner : MonoBehaviour
     bool isThrowing;
     int currentBird;
     public AudioSource SFX;
-
     public BallMovement ballScript;
+
+    public UnityEvent tooManyBirds;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -71,6 +73,11 @@ public class BirdSpawner : MonoBehaviour
 
             ball.transform.position = Vector2.Lerp(lerpPos1, lerpPos2, curve.Evaluate(t));
         }
+
+        if (birds.Count == 20)
+        {
+            tooManyBirds.Invoke();
+        }
     }
 
     public void OnAttack(InputAction.CallbackContext context)
@@ -93,5 +100,15 @@ public class BirdSpawner : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void ResetBirds()
+    {
+        for (int a = 0; a < birds.Count; a++)
+        {
+            Destroy(birds[a]);
+        }
+
+        birds.Clear();
     }
 }
