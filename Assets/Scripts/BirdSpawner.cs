@@ -12,7 +12,7 @@ public class BirdSpawner : MonoBehaviour
 
     Vector2 spawnPos;
 
-    public float timerMax = 4;
+    public float timerMax = 1.5f;
     float timerValue = 0;
 
     public TextMeshProUGUI birdCounter;
@@ -24,6 +24,7 @@ public class BirdSpawner : MonoBehaviour
     public Transform ball;
     public AnimationCurve curve;
     bool isThrowing;
+    int currentBird;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -58,6 +59,11 @@ public class BirdSpawner : MonoBehaviour
                 t = 0;
                 isThrowing = false;
                 ball.transform.position = Vector2.zero;
+
+                Destroy(birds[currentBird]);
+                birds.RemoveAt(currentBird);
+
+                birdCounter.text = "Number of Birds: " + birds.Count;
             }
 
             ball.transform.position = Vector2.Lerp(lerpPos1, lerpPos2, curve.Evaluate(t));
@@ -76,6 +82,8 @@ public class BirdSpawner : MonoBehaviour
 
                 if (birdSR.bounds.Contains(mousePos) == true)
                 {
+                    currentBird = b;
+
                     isThrowing = true;
                     lerpPos2 = mousePos;
                 }
