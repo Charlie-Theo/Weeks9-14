@@ -10,6 +10,7 @@ public class BallMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //saves the ball's default position at the bottom of the screen
         startPos = transform.position;
         startScale = transform.localScale;
     }
@@ -23,6 +24,7 @@ public class BallMovement : MonoBehaviour
 
     public void BallIsThrown()
     {
+        //is called when the mouse is clicked on a bird (refer to bird spawner script)
         StartCoroutine(ThrowBall());
     }
 
@@ -32,6 +34,7 @@ public class BallMovement : MonoBehaviour
 
         float t = 3;
 
+        //decreases the size of the ball via a coroutine to make it feel like its moving farther
         while (t > 2)
         {
             t -= Time.deltaTime;
@@ -40,6 +43,14 @@ public class BallMovement : MonoBehaviour
             yield return null;
         }
 
+        //resets the ball to its default position
+        transform.position = startPos;
+        transform.localScale = startScale;
+    }
+
+    public void ResetBall()
+    {
+        //manual reset of the ball to its default position (by calling this function)
         transform.position = startPos;
         transform.localScale = startScale;
     }
