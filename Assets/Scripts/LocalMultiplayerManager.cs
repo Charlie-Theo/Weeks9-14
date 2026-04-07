@@ -28,6 +28,9 @@ public class LocalMultiplayerManager : MonoBehaviour
             if (Vector2.Distance(attackingPlayer.transform.position, players[i].transform.position) < 0.5f)
             {
                 Debug.Log("Player " + attackingPlayer.playerIndex + " hit Player " + players[i].playerIndex);
+
+                LocalMultiplayerController controller = players[i].GetComponent<LocalMultiplayerController>();
+                StartCoroutine(controller.Attacked());
             }
         }
     }

@@ -11,10 +11,15 @@ public class LocalMultiplayerController : MonoBehaviour
 
     public TrailRenderer trailRenderer;
 
+    public Transform playerTransform;
+    public Vector2 startScale;
+    public AnimationCurve curve;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         trailRenderer.enabled = false;
+        startScale = transform.localScale;
     }
 
     // Update is called once per frame
@@ -35,6 +40,23 @@ public class LocalMultiplayerController : MonoBehaviour
             Debug.Log("Player " + playerInput.playerIndex + ": Attacking");
             manager.PlayerAttacking(playerInput);
         }
+    }
+
+    public IEnumerator Attacked()
+    {
+        playerTransform.localScale = transform.localScale;
+
+        float t = 1;
+
+        while (t > 0.5)
+        {
+            t -= Time.deltaTime;
+            playerTransform.localScale = Vector2.one * curve.Evaluate(t);
+
+            yield return null;
+        }
+
+        transform.localScale = startScale;
     }
 
     public void OnInteract(InputAction.CallbackContext context)
