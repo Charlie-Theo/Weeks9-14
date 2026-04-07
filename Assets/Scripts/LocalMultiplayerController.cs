@@ -9,10 +9,12 @@ public class LocalMultiplayerController : MonoBehaviour
     public Vector2 movementInput;
     public float speed = 5;
 
+    public TrailRenderer trailRenderer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        trailRenderer.enabled = false;
     }
 
     // Update is called once per frame
@@ -37,11 +39,27 @@ public class LocalMultiplayerController : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-
+        if (context.performed)
+        {
+            StartCoroutine(PlayerDash());
+        }
     }
 
-    public IEnumerator PlayerDash() 
+    public IEnumerator PlayerDash()
     {
+        trailRenderer.enabled = true;
+        speed = 10;
+        float t = 0;
 
+        t += Time.deltaTime;
+
+        while (t < 1)
+        {
+            t += Time.deltaTime;
+            yield return null;
+        }
+
+        speed = 5;
+        trailRenderer.enabled = false;
     }
 }
